@@ -2,17 +2,14 @@ import requests
 import re
 import json
 import qrcode
-import base64
 import os
 import re
 import time
 import random
-import hashlib
-import threading
 from PIL import Image
 from websocket import create_connection
 
-#2020-08-14
+#2020.08.14
 
 class Work():
 
