@@ -1,5 +1,5 @@
 
-#sendMessage
+#sendMessage 发消息
 
 import DingTalk
 dt = DingTalk.Work()
@@ -9,7 +9,7 @@ cid = cid_dict['ConversationName']#Please replace 'ConversationName' with Conver
 dt.send(cid,'text')
 
 
-#get members of a group
+#get members of a group 获取群员信息
 
 import DingTalk
 dt = DingTalk.Work()
@@ -18,12 +18,15 @@ cid_dict = dt.getConversation()
 cid = cid_dict['ConversationName']#Please replace 'ConversationName' with ConversationName
 members = dt.getUsers(cid)
 print(dt.formatMembersInfo(members))
+# callback:
+# 
 
-#get messages in a group
+#get messages in a group 获取聊天信息
 
 import DingTalk
 dt = DingTalk.Work()
 dt.Login()
 cid_dict = dt.getConversation()
 cid = cid_dict['ConversationName']#Please replace 'ConversationName' with ConversationName
+print(dt.getMessage(cid))
 
